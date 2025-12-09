@@ -16,6 +16,9 @@ This project provides:
 - Postman collection/envs: `docs/zonesoft-api/postman/ZSAPI_V3/`
 - PDF originals: `docs/zonesoft-api/originals/` (including ZSROI under `originals/ZSROI/`)
 
+## Project context for BMAD agents
+- Always load and follow `project-context.md` before running any BMAD workflow. It is the source of truth for local rules and safety defaults.
+
 ## Starter kit (per-client template)
 - Copy `starter/env.example` to `.env` and fill DB info (server/instance, name, user/password, allowed tables). Keep `.env` out of git.
 - Health check: `npm run starter:health-check` (verifies DB reachability and allowed tables exist).
