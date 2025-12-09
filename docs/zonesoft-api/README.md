@@ -11,14 +11,14 @@ Primary hub for Zonesoft API and ZSROI docs (PDFs and converted markdown).
 
 ### ZSROI
 - `converted/GenericIntegration.md` — ZSROI generic integration guide (menus, orders, status, POS).
-- `converted/IntegrationManagementPlatformManual.md` — ZSROI platform onboarding (2024-05-27) — same filename; ZSROI copy lives alongside main copy.
+- `converted/IntegrationManagementPlatformManual.md` — ZSROI platform onboarding (2024-05-27) — same filename; ZSROI copy lives in originals/ZSROI/.
 
 ### Postman
-- `PostmanCollection/PostmanCollection_ZSAPI_V3/postman_collection.json`
-- Environments: `api.zonesoft.org.postman_environment`, `sandbox.zonesoft.org.postman_environment`
+- `postman/ZSAPI_V3/postman_collection.json`
+- Environments: `postman/ZSAPI_V3/api.zonesoft.org.postman_environment`, `postman/ZSAPI_V3/sandbox.zonesoft.org.postman_environment`
 
 ### Originals
-- PDFs remain alongside conversions under `docs/zonesoft-api/` and `docs/zonesoft-api/ZSROI/`.
+- PDFs are in `originals/` and `originals/ZSROI/`.
 
 ## Usage
 - For AI agents: load markdown versions for context; refer to Postman for request examples/signing.
@@ -26,6 +26,6 @@ Primary hub for Zonesoft API and ZSROI docs (PDFs and converted markdown).
 - For client projects: copy relevant markdown/PDFs or link to this folder.
 
 ## Maintenance
-- When new PDFs arrive, drop them here and convert via `python scripts/convert_pdfs.py`.
+- When new PDFs arrive, drop them under `originals/` (or `originals/ZSROI/`) and convert via `python scripts/convert_pdfs.py`.
 - If filenames clash (e.g., two platform manuals), keep the folder prefix (`ZSROI/`) or add a suffix before conversion.
 

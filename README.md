@@ -10,6 +10,12 @@ This project provides:
 - **API documentation** and helper utilities
 - **Best practices** for Zonesoft API development
 
+## Starter assets for Zonesoft integrations
+- Full docs and converted PDFs: `docs/zonesoft-api/` (see `docs/zonesoft-api/README.md`)
+- Quick reference: `docs/zonesoft-api/cheatsheet.md`
+- Postman collection/envs: `docs/zonesoft-api/postman/ZSAPI_V3/`
+- PDF originals: `docs/zonesoft-api/originals/` (including ZSROI under `originals/ZSROI/`)
+
 ## Getting Started
 
 ### Prerequisites

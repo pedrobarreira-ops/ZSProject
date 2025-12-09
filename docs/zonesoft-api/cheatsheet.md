@@ -34,7 +34,7 @@
 - Entity fields: `converted/StructureOfEntities.md`
 - ZSROI flows: `converted/GenericIntegration.md`
 - Platform onboarding: `converted/IntegrationManagementPlatformManual.md`
-- Postman examples: `PostmanCollection/PostmanCollection_ZSAPI_V3/`
+- Postman examples: `postman/ZSAPI_V3/`
 
 ## Tips
 - Always sign the exact raw body for `X-ZS-SIGNATURE`.
@@ -42,8 +42,8 @@
 - For new integrations, ensure ZS Rest license + ZSAPIFood module are active (per platform manual).
 
 ## Postman Quick Start (ZSAPI v3)
-1) Import collection: `PostmanCollection/postman_collection.json`
-2) Import env: `api.zonesoft.org.postman_environment` (or `sandbox...`)
+1) Import collection: `postman/ZSAPI_V3/postman_collection.json`
+2) Import env: `postman/ZSAPI_V3/api.zonesoft.org.postman_environment` (or sandbox)
 3) Set env vars: `app_key`, `client_id`, `app_secret`, optionally `store`
 4) The pre-request script signs `raw` body: `X-ZS-SIGNATURE = HMAC-SHA256(body, app_secret)`
 5) Send requests (POST) to `{{host}}{{version}}{{interface}}/{action}`

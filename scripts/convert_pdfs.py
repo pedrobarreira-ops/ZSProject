@@ -44,10 +44,11 @@ def main() -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
 
     inputs = [
-        root / "IntegrationManual.pdf",
-        root / "IntegrationManagementPlatformManual.pdf",
-        root / "StructureOfEntities.pdf",
-        root / "ZSROI" / "GenericIntegration.pdf",
+        root / "originals" / "IntegrationManual.pdf",
+        root / "originals" / "IntegrationManagementPlatformManual.pdf",
+        root / "originals" / "StructureOfEntities.pdf",
+        root / "originals" / "ZSROI" / "GenericIntegration.pdf",
+        root / "originals" / "ZSROI" / "IntegrationManagementPlatformManual.pdf",
     ]
 
     for pdf_path in inputs:
