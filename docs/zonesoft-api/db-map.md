@@ -66,11 +66,15 @@ This summarizes the key tables/columns from `zsrest_2024_0` that align to ZSAPI/
 - Numbering/series: `numdoc`, `numdocseries`, `seriesdoc` for document codes and sequencing.
 - Payments: align `tipospagamento` with ZSAPI payment types; `docpag` for applied payments.
 - Exemptions: product/doc fields (`isencao`, `motivo_isencao`, `CashVATScheme`) map to ZSAPI exemptions.
+- `docpag`: payment records (fields observed: `numero`, `doc`, `tipo`, `valor`, `cartao`, `adiantamento`, `serie`, `movimento`).
+- Sample `subcategorias`: additional grouping by `categoria` with `descricao` (e.g., Azul/Branco/vermelho for cat 1; sizes/conditions for other cats), `sync=0`.
 
 ## Routing / Availability
 - `produtosimpressoras`: product → printer routing (e.g., `codigo`, `impressora`).
 - `produtoscentrosprod`: product → production center mapping (`codigo`, `centro`, `informativo`).
 - `produtos_disponibilidade`: product availability (`codigo`, `tipo`, `qtd_default`, `qtd`, `data_alteracao`, `empregado`).
+- `centrosprod`: production centers with `descricao` (e.g., Grelha, Cozinha, gerente, Bar baixo).
+- `impressoras`: printer definitions with center linkage (e.g., codigo=1, descricao=cozinha, centro=5001, sync=0).
 
 ## Optional Next Steps
 - If needed, capture a few anonymized sample rows (produtos, familias/subfamilias, menu/menuschedule, documentos, tipospagamento, iva, taxas_entrega) to validate payload shapes. Omit PII.***
