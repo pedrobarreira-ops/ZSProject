@@ -9,6 +9,7 @@
     "start": "node dist/index.js",
     "starter:health-check": "tsx src/starter/health-check.ts",
     "starter:cli": "tsx src/starter/cli.ts",
+    "starter:read-xdl": "tsx src/starter/read-xdl.ts",
     "test": "jest"
   },
   "keywords": [

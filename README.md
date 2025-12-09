@@ -24,6 +24,7 @@ This project provides:
 - Health check: `npm run starter:health-check` (verifies DB reachability and allowed tables exist).
 - CLI skeleton: `npm run starter:cli -- --sql="SELECT TOP 1 * FROM Products"`; for writes add `--table=Products --backup-ok` and optionally `--dry-run`.
 - Direct DB helpers live in `src/starter/`; default mode is direct DB. Use API mode only for hosted web cases.
+- XDL helper: `npm run starter:read-xdl -- --path="C:\\Zone Soft\\ZSRest\\ZSRest.xdl"` to extract server/db/user (enter password manually).
 
 ## Getting Started
 

@@ -17,6 +17,7 @@ BMAD agents: load and follow this file before any workflow. Treat this as the so
 - Copy `starter/env.example` to `.env` and fill per client.
 - Health check: `npm run starter:health-check`.
 - CLI: `npm run starter:cli -- --sql="..." [--table=Name --backup-ok --dry-run]`.
+- XDL helper: `npm run starter:read-xdl -- --path="C:\\Zone Soft\\ZSRest\\ZSRest.xdl"` to extract server/db/user (enter password manually).
 
 ## Zonesoft Notes (running list)
 - If API is required (hosted web), use API mode; no direct DB over internet.
