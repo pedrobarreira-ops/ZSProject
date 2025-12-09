@@ -16,6 +16,12 @@ This project provides:
 - Postman collection/envs: `docs/zonesoft-api/postman/ZSAPI_V3/`
 - PDF originals: `docs/zonesoft-api/originals/` (including ZSROI under `originals/ZSROI/`)
 
+## Starter kit (per-client template)
+- Copy `starter/env.example` to `.env` and fill DB info (server/instance, name, user/password, allowed tables). Keep `.env` out of git.
+- Health check: `npm run starter:health-check` (verifies DB reachability and allowed tables exist).
+- CLI skeleton: `npm run starter:cli -- --sql="SELECT TOP 1 * FROM Products"`; for writes add `--table=Products --backup-ok` and optionally `--dry-run`.
+- Direct DB helpers live in `src/starter/`; default mode is direct DB. Use API mode only for hosted web cases.
+
 ## Getting Started
 
 ### Prerequisites
