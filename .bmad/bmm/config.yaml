@@ -1,0 +1,25 @@
+# BMAD BMM Configuration
+# This file contains project-level configuration for BMAD BMM workflows
+
+# Project Information
+project_name: "Zonesoft AI Helper"
+user_name: "Pedro"  # TODO: Set your name
+
+# Output Configuration
+output_folder: "docs/sprint-artifacts"
+sprint_artifacts: "docs/sprint-artifacts"
+
+# Language Settings
+communication_language: "en"  # Language for AI communication
+document_output_language: "en"  # Language for generated documents
+
+# User Skill Level
+# Options: beginner, intermediate, advanced
+user_skill_level: "beginner"
+
+# Project Type
+# Options: web-app, api, library, mobile-app, desktop-app, cli, other
+project_type: "library"
+
+# Workflow Settings
+workflow_level: "standard"  # Options: quick, standard, comprehensive

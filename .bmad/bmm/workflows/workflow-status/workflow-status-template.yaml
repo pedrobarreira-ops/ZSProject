@@ -1,0 +1,28 @@
+# BMAD BMM Workflow Status
+# This file tracks the current state of your project workflow
+# Generated: {date}
+
+project:
+  name: "{project_name}"
+  type: "{project_type}"
+  level: "{workflow_level}"
+
+user:
+  name: "{user_name}"
+  skill_level: "{user_skill_level}"
+
+current_phase: "init"
+current_workflow: null
+current_task: null
+
+workflow_history:
+  - phase: "init"
+    started: "{date}"
+    status: "in_progress"
+
+next_steps:
+  - "Complete project initialization"
+  - "Review and update config.yaml with your information"
+  - "Run workflow-status to see what to do next"
+
+notes: []

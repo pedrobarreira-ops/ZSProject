@@ -1,0 +1,20 @@
+# Quick Development Workflow Path
+# Simplified workflow for rapid prototyping and quick projects
+
+phases:
+  - name: "init"
+    description: "Quick project setup"
+    workflows:
+      - "workflow-init"
+  
+  - name: "development"
+    description: "Rapid development"
+    workflows:
+      - "quick-dev"
+      - "create-story"
+  
+  - name: "deployment"
+    description: "Quick deployment"
+    workflows:
+      - "document-project"
+

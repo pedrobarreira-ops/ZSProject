@@ -1,0 +1,48 @@
+# Web Application Workflow Path
+# This defines the typical workflow path for web applications
+
+phases:
+  - name: "init"
+    description: "Project initialization and setup"
+    workflows:
+      - "workflow-init"
+      - "create-epics-and-stories"
+  
+  - name: "planning"
+    description: "Requirements gathering and planning"
+    workflows:
+      - "create-epics-and-stories"
+      - "create-tech-spec"
+      - "sprint-planning"
+  
+  - name: "design"
+    description: "UI/UX design and architecture"
+    workflows:
+      - "create-excalidraw-wireframe"
+      - "create-excalidraw-dataflow"
+      - "create-excalidraw-diagram"
+  
+  - name: "development"
+    description: "Active development"
+    workflows:
+      - "dev-story"
+      - "quick-dev"
+      - "code-review"
+  
+  - name: "testing"
+    description: "Testing and QA"
+    workflows:
+      - "code-review"
+      - "implementation-readiness"
+  
+  - name: "deployment"
+    description: "Deployment and release"
+    workflows:
+      - "document-project"
+  
+  - name: "maintenance"
+    description: "Ongoing maintenance"
+    workflows:
+      - "retrospective"
+      - "correct-course"
+
