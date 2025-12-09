@@ -58,6 +58,9 @@ This summarizes the key tables/columns from `zsrest_2024_0` that align to ZSAPI/
 
 ## Notes and Mapping Tips
 - Use `codigo`/`id` as primary identifiers; link products to families via `familia/subfam/categoria`.
+- Sample `produtos`: shows family/subfamily/tax/price and flags; `vendersemstock=1` on several items; IVA codes align to IVA table; categories/subcategories mostly 0 in sample.
+- Sample `familias`: includes food/drink groups (e.g., COUVERT, ENTRADAS, SOPAS, VINHOS, CARNE, PEIXE, Comidas, Bebidas) with UI positions/colors; `tipo` varies (0/1).
+- Sample `subfamilias`: beverage/food sub-groups (e.g., SUMOS/REFRIGERANTES, ÁGUAS, CAFÉS/CHÁS, VINHOS A COPO/TINTOS/BRANCOS/ROSÉS/VERDES) tied to `familia` codes like 5002/5003; UI colors/positions set.
 - Menu availability/pricing: `menuschedule`, `menu/menus/menufind`, `niveismenu*`.
 - Taxes: `iva` + product-level tax fields; delivery/fuel surcharges via `taxas_entrega`/`taxascombustiveis`.
 - Numbering/series: `numdoc`, `numdocseries`, `seriesdoc` for document codes and sequencing.
