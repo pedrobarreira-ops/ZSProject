@@ -39,6 +39,11 @@ This summarizes the key tables/columns from `zsrest_2024_0` that align to ZSAPI/
 - `tipospagamento`, `tblOpPagamento`: payment types/options (days, deposit/bill flags, commission).
 - `pagamentos_caixa`, `pagamentos_dia`: cash and daily payment records.
 
+## Numbering / Series
+- `numdoc`: doc type counters (VD, TK, FA, RC, GR, NC, AD, GT, VS, RQ, QB, CI, EC, CM) plus `serie`.
+- `numdocseries`: (`sync`, `serie`, `doc`, `numero`, `lastHash`) — per-series counters (e.g., `1A2501/FS/1`, `DIA/CX/1`).
+- `seriesdoc`: (`doc`, `N1`, `N2`, `N3`, `sync`) — series-level controls per doc type.
+
 ## Notes and Mapping Tips
 - Use `codigo`/`id` as primary identifiers; link products to families via `familia/subfam/categoria`.
 - Menu availability/pricing: `menuschedule`, `menu/menus/menufind`, `niveismenu*`.
