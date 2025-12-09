@@ -29,15 +29,27 @@ This summarizes the key tables/columns from `zsrest_2024_0` that align to ZSAPI/
 - Families/Categories: `familias`, `subfamilias`, `subcategorias`.
 - Menus: `menu`, `menufind`, `menus`, `menuschedule`, `menutemp` (pricing, availability, temp/pendings).
 - Levels: `niveismenu`, `niveismenuext` (required items, defaults, pricing, complements).
+- Observed fields:
+  - `menus`: (id, codigo, prod, fixo, pendente)
+  - `menu`: (sessao, nivel, codigo, preco)
+  - `menufind`: (sessao, codigo, fixo, id, nivel, preco)
+  - `menuschedule`: (dia, activo, inicio, fim, seguinte)
+  - `niveismenu`: (menu, nivel, descricao, obrigatorio, ordem)
+  - `niveismenuext`: (menu, nivel, codigo, fixo, preco, valcomplementos, produtodefault, opcaopvp)
 
 ## Taxes / Fees
 - `iva`, `ivacaixa`, `ivatemp`: tax definitions and session tax totals.
 - `taxas_entrega`: delivery fees by distance.
 - `taxascombustiveis`: fuel surcharges.
+- Sample `iva`: Isento (0%), Reduzida (6%), Intermédia (13%), Normal (23%).
+- `taxas_entrega`: currently empty in sample.
+- Sample `taxascombustiveis`: codes with `descricao` and `taxa` (e.g., 8%, 6%), `sync=0`.
 
 ## Payments
 - `tipospagamento`, `tblOpPagamento`: payment types/options (days, deposit/bill flags, commission).
 - `pagamentos_caixa`, `pagamentos_dia`: cash and daily payment records.
+- Sample `tipospagamento`: includes cash (`Dinheiro`), card (debit/credit), vouchers (iFood, Uber Eats, Glovo, etc.), wallet, MBWay, giftcard, internal consumption, adjustments, and many delivery/app-specific methods. Flags: `bill`, `sale`; `depositar/editavel/finaceiro/comissao` mostly null/zero in sample.
+- Sample `tblOpPagamento`: Pronto Pagamento (0 days), Payment in 8/15/25/30/60/90/120 days (`dias`), all `sync=0`.
 
 ## Numbering / Series
 - `numdoc`: doc type counters (VD, TK, FA, RC, GR, NC, AD, GT, VS, RQ, QB, CI, EC, CM) plus `serie`.
@@ -51,6 +63,11 @@ This summarizes the key tables/columns from `zsrest_2024_0` that align to ZSAPI/
 - Numbering/series: `numdoc`, `numdocseries`, `seriesdoc` for document codes and sequencing.
 - Payments: align `tipospagamento` with ZSAPI payment types; `docpag` for applied payments.
 - Exemptions: product/doc fields (`isencao`, `motivo_isencao`, `CashVATScheme`) map to ZSAPI exemptions.
+
+## Routing / Availability
+- `produtosimpressoras`: product → printer routing (e.g., `codigo`, `impressora`).
+- `produtoscentrosprod`: product → production center mapping (`codigo`, `centro`, `informativo`).
+- `produtos_disponibilidade`: product availability (`codigo`, `tipo`, `qtd_default`, `qtd`, `data_alteracao`, `empregado`).
 
 ## Optional Next Steps
 - If needed, capture a few anonymized sample rows (produtos, familias/subfamilias, menu/menuschedule, documentos, tipospagamento, iva, taxas_entrega) to validate payload shapes. Omit PII.***
